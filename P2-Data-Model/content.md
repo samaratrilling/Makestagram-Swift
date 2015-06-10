@@ -17,7 +17,7 @@ This is the detailed list of features our app will have:
 - Delete photos you posted
 - Flag photos other users have posted
 
-You know most of the features from popular social network apps. You might wonder why include *flagging* content in this simple photo sharing app. We include it, because it's an important feature to get your app into Apple's App Store. Apple requires apps with user created content to have a *flag* feature - this way users can report inappropriate content. Since you will likely need this feature in your original app, we have included it as part of the tutorial.
+You know most of the features from popular social network apps. You might wonder why we include *flagging* content in this simple photo sharing app. We include it because it's an important feature to get your app into Apple's App Store. Apple requires apps with user-created content to have a *flag* feature - this way users can report inappropriate content. Since you will likely need this feature in your original app, we have included it as part of the tutorial.
 
 Through building this app you will learn how to use Parse and many iOS features to build a rather complex application. That will enable you to build your own apps when you have completed the tutorial.
 
@@ -42,7 +42,7 @@ These three classes will definitely be part of our data model!
 
 In addition to finding classes we also need to think about the possible interactions with them. Some of the interactions need to be considered when defining our data model.
 
-Deleting a post is easy, we can simply delete the associated post object, so we don't need to integrate this into our model.
+Deleting a post is easy: we can simply delete the associated post object, so we don't need to integrate this into our model.
 
 Some interactions are more complex, such as liking a post or following a user.
 
@@ -74,19 +74,19 @@ The diagram above illustrates the different classes, their most important proper
 
 Let's discuss them briefly:
 
-- **User**
+- **User** 
 A new *User* class is created whenever a user signs up. The *username* will store the user's display name: this name is used to log in and it displayed in the app when the user creates posts or likes other posts.
 
-- **Post**
+- **Post** 
 A *Post* class is created whenever a user posts a new photo. The most important properties of a post are the *user* it belongs to and the *imageFile* stored along with the post.
 
-- **FlaggedContent**
+- **FlaggedContent** 
 Marks which posts have been flagged. It stores a reference to the *post* that is flagged and the *user* that has flagged it.
 
-- **Like**
+- **Like** 
 Works just as *FlaggedContent*; stores a reference to the *post* that is like and the *user* that has liked it.
 
-- **Follow**
+- **Follow** 
 Stores a following relationship between two users. The *toUser* field stores the user being followed, the *fromUser* user field stores the following user.
 
 Now you should have a good understanding of all the classes we need. You will be able to use our approach to identify the classes for your original app as well. First, take a look at the different subjects that you can identify from your features, e.g. *Users*, *Posts*, etc. Then take a look at the relationships between them.

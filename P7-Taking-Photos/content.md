@@ -147,7 +147,7 @@ To implement the second responsibility the `PhotoTakingHelper` will need to have
 
 Let's get started with building the `PhotoTakingHelper`!
 
-###Initialier and Properties
+###Initializer and Properties
 
 First, let's take care of the initializer and the properties of the `PhotoTakingHelper`.
 
@@ -182,13 +182,13 @@ Replace the entire content of `PhotoTakingHelper.swift` with the following code:
 
 Let's discuss this code. In the first line after `import UIKit` we are declaring a `typealias`. Using the `typealias` keyword we can provide a function signature with a name. In this case we are saying that a function of type `PhotoTakingHelperCallback` takes an `UIImage?` as parameter and returns `Void`. This means: any function that wants to be the callback of the `PhotoTakingHelper` needs to have exactly this signature.
 
-`PhotoTakingHelper` has three properties. The first one `viewController` stores a `weak` reference to a `viewController`. As we discussed earlier, this reference is necessary because the `PhotoTakingHelper` needs a `UIViewController` on which it can present other View Controllers. It is a `weak` reference, since the `PhotoTakingHelper` does not own the referenced View Controller.
+`PhotoTakingHelper` has three properties. The first one, `viewController`, stores a `weak` reference to a `viewController`. As we discussed earlier, this reference is necessary because the `PhotoTakingHelper` needs a `UIViewController` on which it can present other View Controllers. It is a `weak` reference, since the `PhotoTakingHelper` does not own the referenced View Controller.
 
 Additionally we store the `callback` function and provide a property to store an `UIImagePickerController` (which we will use a little bit later).
 
 The initializer of this class receives the View Controller on which we will present other View Controllers and the callback that we will call as soon as a user has picked an image.
 
-When the class is entirely initialized we immediately call `showPhotoSourceSelection()`. The method is still empty right now, later it will present the dialog that allows user to choose between their camera and their photo library.
+When the class is entirely initialized we immediately call `showPhotoSourceSelection()`. The method is still empty right now; later it will present the dialog that allows user to choose between their camera and their photo library.
 
 Because we call `showPhotoSourceSelection()` directly from the initializer, the dialog will be presented as soon as we create an instance of `PhotoTakingHelper`.
 
@@ -229,7 +229,7 @@ Replace the empty implementation of `showPhotoSourceSelection()` with the follow
       }
 
 In the first line we set up the the `UIAlertController` by providing it with a `message`
-and a `preferredStyle`. The `UIAlertController` can be used to present different types of popups. By choosing the `.ActionSheet` option, we create a popup that get's displayed from the bottom edge of the screen.
+and a `preferredStyle`. The `UIAlertController` can be used to present different types of popups. By choosing the `.ActionSheet` option, we create a popup that gets displayed from the bottom edge of the screen.
 
 After the initial set up, we add different `UIAlertAction`s to the Alert Controller. Each action will result in one button on the popup.
 

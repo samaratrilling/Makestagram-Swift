@@ -11,7 +11,7 @@ The Parse framework requires us to provide the *ID* of our Parse App as soon as 
 
 #Configuring the SDK on App Launch
 
-Every iOS project gets created with class called `AppDelegate`. This class has multiple methods that get called when our App starts, is put in the background or is closed. Whenever we want to respond to such *lifecycle* events, the `AppDelegate` is the right place to add our code. If you open the *AppDelegate.swift* file, that is part of the *Makestagram* project, you will see the different methods that are part of the `AppDelegate`. Apple also provides some helpful comments about the responsibilities of each method. For now, we are mainly interested in the following method:
+Every iOS project gets created with class called `AppDelegate`. This class has multiple methods that get called when our App starts, is put in the background or is closed. Whenever we want to respond to such *lifecycle* events, the `AppDelegate` is the right place to add our code. If you open the *AppDelegate.swift* file that is part of the *Makestagram* project, you will see the different methods that are part of the `AppDelegate`. Apple also provides some helpful comments about the responsibilities of each method. For now, we are mainly interested in the following method:
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
       // Override point for customization after application launch.
@@ -65,7 +65,7 @@ Now we should be ready to work with Parse SDK! In a moment we will see if you've
 
 All features in *Makestagram*, e.g. posting photos, following friends, etc. will require a logged in user. This means that before we can start building our actual app, we need a way for a user to log in.
 
-I however don't want to start this tutorial with building a login screen. For now we should provide a fake login mechanism so that we can start working on the core features of the app.
+However, I don't want to start this tutorial with building a login screen. For now we should provide a fake login mechanism so that we can start working on the core features of the app.
 
 Later in this tutorial we will spend some time building a full login mechanism, including login with a Facebook account.
 
